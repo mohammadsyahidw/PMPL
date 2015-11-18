@@ -31,6 +31,11 @@
 					<form method="POST" action="{% block form_action %}{% endblock %}">
             					<input name="item_text" id="id_new_item" class="form-control input-lg" placeholder="Enter a to-do item" />
             				{% csrf_token %}
+                                        {% if error %}
+                                            <div class="form-group has-error">
+                                            <span class="help-block">{{ error }}</span>
+                                            </div>
+                                        {% endif %}
        		 			</form>
 				</div>
 			</div>
@@ -49,11 +54,5 @@
 		</div>
 		
 	</div>
-	<footer class="footer">
-		<div class="container" style="position: absolute; bottom: 0px; width: 100%; height: 60px; background-color: #F5F5F5">
-			<center>
-			<p class="text-muted">reach me via twitter @mohammadsyahidw</p></center>
-		</div>
-	</footer>  	
     </body>
 </html>
