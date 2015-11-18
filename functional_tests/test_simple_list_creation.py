@@ -120,6 +120,8 @@ class NewVisitorTest(FunctionalTest):
 
         # She visits that URL - her to-do list is still there.
         """
+	
+        
         # The page updates again, and now shows both items on her list
         self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
         self.check_for_row_in_list_table('1: Buy peacock feathers')
@@ -129,6 +131,7 @@ class NewVisitorTest(FunctionalTest):
         ## We use a new browser session to make sure that no information
         ## of Edith's is coming through from cookies etc #1
         self.browser.quit()
+        """ dsdsdsd        
         self.browser = webdriver.Firefox()
 
         # Francis visits the home page.  There is no sign of Edith's
@@ -155,3 +158,4 @@ class NewVisitorTest(FunctionalTest):
         self.assertIn('Buy milk', page_text)
 
         # Satisfied, they both go back to sleep
+	"""
